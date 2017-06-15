@@ -5,6 +5,7 @@
  * Copyright (C) 1996 Paul Mackerras
  * Copyright (C) 2002 Martin Pool <mbp@samba.org>
  * Copyright (C) 2003-2009 Wayne Davison
+ * Copyright (C) 2017 Yuanle Song <sylecn@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,6 +21,7 @@
  * with this program; if not, visit the http://fsf.org website.
  */
 
+#include <sys/sysmacros.h>
 #include "rsync.h"
 
 extern int verbose;

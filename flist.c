@@ -5,6 +5,7 @@
  * Copyright (C) 1996 Paul Mackerras
  * Copyright (C) 2001, 2002 Martin Pool <mbp@samba.org>
  * Copyright (C) 2002-2009 Wayne Davison
+ * Copyright (C) 2017 Yuanle Song <sylecn@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +25,7 @@
 #include "ifuncs.h"
 #include "rounding.h"
 #include "io.h"
+#include <sys/sysmacros.h>
 
 extern int verbose;
 extern int am_root;
