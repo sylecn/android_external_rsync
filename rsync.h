@@ -3,6 +3,7 @@
  * Copyright (C) 1996 Paul Mackerras
  * Copyright (C) 2001, 2002 Martin Pool <mbp@samba.org>
  * Copyright (C) 2003-2008 Wayne Davison
+ * Copyright (C) 2020 Yuanle Song <sylecn@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -519,6 +520,13 @@ typedef unsigned int size_t;
 #endif
 #endif
 
+#ifdef __aarch64__
+#define DEV_T dev_t
+#define OFF_T off64_t
+#define STRUCT_STAT struct stat64
+#define USE_STAT64_FUNCS 1
+#define SIZEOF_CAPITAL_OFF_T SIZEOF_OFF64_T
+#else
 #ifdef __BIONIC__
 #define DEV_T unsigned long long
 #define OFF_T off_t
@@ -535,6 +543,7 @@ typedef unsigned int size_t;
 #define STRUCT_STAT struct stat64
 #define USE_STAT64_FUNCS 1
 #define SIZEOF_CAPITAL_OFF_T SIZEOF_OFF64_T
+#endif
 #endif
 
 /* CAVEAT: on some systems, int64 will really be a 32-bit integer IFF

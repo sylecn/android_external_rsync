@@ -597,7 +597,7 @@
 #define RSYNC_RSH "ssh"
 
 /* rsync release version */
-#define RSYNC_VERSION "3.0.8"
+#define RSYNC_VERSION "3.0.9"
 
 /* Define to 1 if sockets need to be shutdown */
 /* #undef SHUTDOWN_ALL_SOCKETS */
